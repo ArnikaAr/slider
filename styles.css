@@ -1,0 +1,148 @@
+body {
+    background-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.slide-item {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    left: 5%;
+    width: auto;
+    margin-top: -12px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px 3px;
+    z-index: 2;
+}
+
+.next {
+    bottom: 0;
+    border-radius: 3px;
+    transform: rotate(90deg);
+}
+
+.prev {
+    top: 0;
+    border-radius: 3px;
+    transform: rotate(90deg);
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.trap {
+    position: absolute;
+    width: 33%;
+    height: 0;
+    border-bottom: 100vh solid white;
+    border-left: 150px solid transparent;
+    border-right: 0 solid transparent;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    opacity: .7;
+    
+}
+
+.trap h2 {
+    font-size: 50px;
+    padding-left: 30px;
+    position: absolute;
+    padding: 6em 0;
+    text-align: center;
+}
+.view{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top:93vh;
+    padding-right: 10px; 
+    justify-content: flex-end; 
+  
+}
+.view img{
+    padding-right: 5px;
+}
+.view p{
+    padding-top: 2px;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opasity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opasity: 1
+    }
+}
+
+@media (max-width: 415px) {
+    .slide-item {
+        height: 40vh;
+    }
+    .next {
+        margin-bottom: 105%;
+    }
+    .trap {
+        border-bottom: 71vw solid white;
+    }
+    .trap h2 {
+        font-size: 15px;
+        padding-right: 10px;
+        padding: 6em 0;
+    }
+    .view{
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 33vh;
+        padding-right: 10px; 
+        justify-content: flex-end;  
+    }
+    .view img{
+        padding-bottom: 1px;
+        padding-left: 5px;
+    }
+    .trap h4{
+        padding-top: 10px;
+        padding-left: 60%; 
+        
+    }
+
+}
